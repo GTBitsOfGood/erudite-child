@@ -1,4 +1,32 @@
-h1 {
-  font-family: helvetica;
-  font-weight: 200;
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1.ui.header {
+  color: #89c4f4;
+}
+p {
+  padding-left: 30px;
+}
+.home-info-1 {
+  padding: 120px 0;
+  color: #818181;
+}
+.home-info-2 {
+  color: #818181;
+}
+.home-info-3 {
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 80px;
+  color: #818181;
+  font-size: 20px;
+}
+.home-text-1 {
+  font-size: 30px;
+}
+.home-text-2 {
+  font-size: 25px;
 }
