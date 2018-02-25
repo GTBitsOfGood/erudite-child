@@ -1,13 +1,16 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 import SignupForm from '../components/SignupForm';
+import Footer from '../components/Footer';
 import {Grid, Container, Segment, Image, Header, Button} from 'semantic-ui-react';
 
 class HomePage extends React.Component {
   render() {
     return (
       <Container fluid>
-        <Navbar/>
+      <div className="home-nav">
+          <Navbar name="Login"/>
+      </div>
         <Header as='h1' floated='right'>
           What is The Erudite Child
         </Header>
@@ -78,6 +81,12 @@ class HomePage extends React.Component {
             </Grid.Column>
           </Grid>
        </div>
+       <div className="ui horizontal divider">
+          <div className="home-new-feed">
+
+          </div>
+       </div>
+       <Footer />
     </Container>
     )
   }
