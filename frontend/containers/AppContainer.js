@@ -2,13 +2,15 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { connect } from 'react-redux';
 import Title from '../components/Title';
+import HomePage from '../components/HomePage';
 
 const AppContainer = ({ name }) => {
-    return (
-        <div>
-            <Title name={name} />
-        </div>
-    );
+  return (
+    <div>
+      <Title name={name} />
+      <HomePage />
+    </div>
+  );
 };
 
 AppContainer.propTypes = {
