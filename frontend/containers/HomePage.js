@@ -2,18 +2,20 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 import SignupForm from '../components/SignupForm';
 import Footer from '../components/Footer';
-import {Grid, Container, Segment, Image, Header, Button} from 'semantic-ui-react';
+import {Grid, Container, Segment, Image, Header, Button, Divider} from 'semantic-ui-react';
 
 class HomePage extends React.Component {
   render() {
     return (
-      <Container fluid>
-      <div className="home-nav">
-          <Navbar name="Login"/>
-      </div>
-        <Header as='h1' floated='right'>
-          What is The Erudite Child
-        </Header>
+      <Container fluid className="home-body">
+        <div className="home-nav">
+            <Navbar name="Login"/>
+        </div>
+        <div className="header-1">
+          <Header as='h1' floated='right'>
+            What is The Erudite Child
+          </Header>
+        </div>
         <div className="home-info-1">
           <Grid>
             <Grid.Column width={4}>
@@ -75,16 +77,11 @@ class HomePage extends React.Component {
             </Grid.Column>
             <Grid.Column>
                 <Grid.Column>
-                  <p>Help a Child monthly by Signing up</p>
+                  <p>Help a child forever by signing up</p>
                   <Segment><SignupForm name="Sign up and Donate"/></Segment>
                 </Grid.Column>
             </Grid.Column>
           </Grid>
-       </div>
-       <div className="ui horizontal divider">
-          <div className="home-new-feed">
-
-          </div>
        </div>
        <Footer />
     </Container>
