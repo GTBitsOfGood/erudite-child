@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 import SignupForm from '../components/SignupForm';
 import Footer from '../components/Footer';
+import Carousel from '../components/Carousel';
 import {Grid, Container, Segment, Image, Header, Button, Divider} from 'semantic-ui-react';
 
 class HomePage extends React.Component {
@@ -11,6 +12,7 @@ class HomePage extends React.Component {
         <div className="home-nav">
             <Navbar name="Login"/>
         </div>
+        <Carousel/>
         <div className="header-1">
           <Header as='h1' floated='right'>
             What is The Erudite Child
