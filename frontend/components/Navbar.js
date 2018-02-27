@@ -9,7 +9,7 @@ class Navbar extends React.Component {
         <div className= "right menu">
           <a href="#"><Menu.Item name='About Us' /></a>
           <a href="#"><Menu.Item name='Get Involved' /></a>
-          <Button basic color='blue'>{this.props.name}</Button>
+          <Button basic color='teal'>{this.props.name}</Button>
           <Button size='huge' color='yellow'>Donate</Button>
         </div>
       </Menu>
