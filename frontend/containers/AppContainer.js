@@ -1,9 +1,8 @@
- import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import React from 'react';
 import { connect } from 'react-redux';
 import Title from '../components/Title';
 import HomePage from '../containers/HomePage';
-import StaffList from '../components/StaffList';
 
 const AppContainer = ({ name }) => {
   return (
