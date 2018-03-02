@@ -85,44 +85,45 @@ class AboutUs extends React.Component {
           const carouselHelpersSponsors = ( 
               <div>
                   <h2>Sponsors</h2>
-                  <div style={{ marginTop: '25px', marginBottom: '25px' }}>
+                  <div>
                       <Slider {...settings}>{sponsorList} </Slider>
                   </div>
+                  <hr />
                   <h2>Staff</h2>
-                  <div style={{ marginTop: '25px', marginBottom: '25px' }}>
+                  <div >
                       <Slider {...settings}>{personList}</Slider>
                   </div>
               </div>
             )
 
         return (
-            <div style={{marginLeft:'25px'}}>
-                <h1 >About Us</h1>
+            <div id="main" style={{marginTop:'-60px'}}>
+                <header>
+					<h2>About Us</h2>
+					<p>Some Line about Erudite Child</p>
+				</header>
+                <section className="wrapper aboutus">
+                <div className="inner">
                 <h2>Founders</h2>
                 <Grid >
                     <Grid.Column width={4}>
                         <Image src='https://www.oxfamamerica.org/static/media/images/Aziz_iKQ1qg1.jpg' />
                     </Grid.Column>
-                    <Grid.Column width={10}>
+                    <Grid.Column width={10} style={{marginTop:'-8px'}}>
                         fkweklm kflkw emeflk mkl emwfkl melfkmwekl mfewkl fmlkwemf kflkwfmwl
                         fmwel mkfklwe klmfmweklfmw lkmfklew mlkwefm kewmf klmwlfe mklfewm 
                         fmw eklmkflmfklwem lk fmwlmkflwm lkmflkwmfwm klm mfwlkmfkl emwfm kewmfwf mk
                         fwmk lmfwklemfwelkf mwklm klwfmklwe mlkfme klfmwkl mfklwem lfwekm fmwklm
                         fkweklm kflkw emeflk mkl emwfkl melfkmwekl mfewkl fmlkwemf kflkwfmwl
                         fmwel mkfklwe klmfmweklfmw lkmfklew mlkwefm kewmf klmwlfe mklfewm 
-                        fmw eklmkflmfklwem lk fmwlmkflwm lkmflkwmfwm klm mfwlkmfkl emwfm kewmfwf mk
-                        fwmk lmfwklemfwelkf mwklm klwfmklwe mlkfme klfmwkl mfklwem lfwekm fmwklm
-                        fkweklm kflkw emeflk mkl emwfkl melfkmwekl mfewkl fmlkwemf kflkwfmwl
-                        fmwel mkfklwe klmfmweklfmw lkmfklew mlkwefm kewmf klmwlfe mklfewm 
-                        fmw eklmkflmfklwem lk fmwlmkflwm lkmflkwmfwm klm mfwlkmfkl emwfm kewmfwf mk
-                        fwmk lmfwklemfwelkf mwklm klwfmklwe mlkfme klfmwkl mfklwem lfwekm fmwklm
+                   
                     </Grid.Column>
                 </Grid>
                 <Grid>
-                    <Grid.Column width={4}>
+                    <Grid.Column width={4} >
                         <Image src='https://www.oxfamamerica.org/static/media/images/Aziz_iKQ1qg1.jpg' />
                     </Grid.Column>
-                    <Grid.Column width={10}>
+                    <Grid.Column width={10} style={{marginTop:'-8px'}}>
                         fkweklm kflkw emeflk mkl emwfkl melfkmwekl mfewkl fmlkwemf kflkwfmwl
                         fmwel mkfklwe klmfmweklfmw lkmfklew mlkwefm kewmf klmwlfe mklfewm 
                         fmw eklmkflmfklwem lk fmwlmkflwm lkmflkwmfwm klm mfwlkmfkl emwfm kewmfwf mk
@@ -132,23 +133,28 @@ class AboutUs extends React.Component {
                         fmw eklmkflmfklwem lk fmwlmkflwm lkmflkwmfwm klm mfwlkmfkl emwfm kewmfwf mk
                         fwmk lmfwklemfwelkf mwklm klwfmklwe mlkfme klfmwkl mfklwem lfwekm fmwklm
                         fkweklm kflkw emeflk mkl emwfkl melfkmwekl mfewkl fmlkwemf kflkwfmwl
-                        fmwel mkfklwe klmfmweklfmw lkmfklew mlkwefm kewmf klmwlfe mklfewm 
-                        fmw eklmkflmfklwem lk fmwlmkflwm lkmflkwmfwm klm mfwlkmfkl emwfm kewmfwf mk
-                        fwmk lmfwklemfwelkf mwklm klwfmklwe mlkfme klfmwkl mfklwem lfwekm fmwklm
+
                     </Grid.Column>
                 </Grid>
+                <hr />
                 {carouselHelpersSponsors}
-                <div style={{marginTop:'25px'}}>
-                <Button bsStyle="primary" onClick={this.handleNameChange.bind(this)}>Change</Button>
-                <Button bsStyle="primary" onClick={this.handlePostSponsor.bind(this)}>Get Persons</Button>
-                <Button bsStyle="primary" href="/aboutform">Edit People</Button>
+
                 </div>
-     
+                </section>
+
             </div>
         )
             
     }
 }
+/* Debuggin Button
+                <div style={{marginTop:'25px'}}>
+                <Button bsStyle="primary" onClick={this.handleNameChange.bind(this)}>Change</Button>
+                <Button bsStyle="primary" onClick={this.handlePostSponsor.bind(this)}>Get Persons</Button>
+                <Button bsStyle="primary" href="/aboutform">Edit People</Button>
+                </div>
+
+*/
 function mapStateToProps(state) {
     return {
         personPropArray: state.people,
