@@ -1,49 +1,102 @@
 import React from 'react';
-import {changeName,postPerson,getPerson} from '../actions/index';
+import {changeName,postPerson,getPerson,getSponsors, postSponsor} from '../actions/index';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import {Button} from 'react-bootstrap'
 import { Grid, Card, Icon, Image, Menu } from 'semantic-ui-react';
 import PersonCard from './personCard';
+import Slider from "react-slick";
+
 
 class AboutUs extends React.Component {
-    componentDidMount(){
-        this.props.getPerson()
+    getData() {
+        this.props.getPerson();
+        this.props.getSponsors();
+    }
+    constructor(props) {
+        super(props);
+        this.getData();
       }
+    //componentDidMount(){
+    //    this.props.getPerson();
+     //   this.props.getSponsors()
+    //  }
     handleNameChange() {
         this.props.changeName();
     }
     handlePostPerson() {
         console.log("pressed");
-        const p = {
-            title: "Sample Title",
-            description: "Sample",
-            images: "https://lifehacker.com/puppies-love-your-baby-talk-but-dogs-dont-1794355775"
+        const per = {
+            title: "Helper Boy",
+            description: "I carry stuff",
+            images: "https://cdn.shopify.com/s/files/1/2315/6477/collections/backpack-col.progressive.jpg",
+            isSponsor: false
         }
-        this.props.postPerson(p)
+        this.props.postPerson(per)
     }
+
+    handlePostSponsor() {
+        console.log("pressed");
+        const spon = {
+            title: "Laughing Cat",
+            description: "I laugh at your pain",
+            images: "http://www.catster.com/wp-content/uploads/2016/11/600-Lil-BUB.png",
+            isSponsor: true
+        }
+        this.props.postSponsor(spon)
+    }
+
     handleGetPerson() {
-        console.log((this.props.pep)[0])
+        console.log((this.props.personPropArray)[0])
     }
     
     render() {
-        const bb = this.props.pep;
-        console.log(bb);
-        
-        const personList = this.props.pep.map(function(perArr){
+        const sponsorList = this.props.sponsorPropArray.map(function(sponsorArray){
             return(
-              <div key={perArr._id}>
+                <div key={sponsorArray._id}>  
                 <PersonCard
-                      _id= {perArr._id}
-                      title={perArr.title}
-                      description={perArr.description}
-                      images={perArr.images}/>
-              </div>
+                      _id= {sponsorArray._id}
+                      title={sponsorArray.title}
+                      description={sponsorArray.description}
+                      images={sponsorArray.images}/>
+            </div>
+
             )
           })
           
+        const personList = this.props.personPropArray.map(function(personArr){
+            return(
+                <div key={personArr._id}>
+                <PersonCard
+                      _id= {personArr._id}
+                      title={personArr.title}
+                      description={personArr.description}
+                      images={personArr.images}/>
+            </div>
+            )
+          })
+          var settings = {
+            dots: true,
+            slidesToShow: 3,
+            initialSlide: 1,
+            variableWidth: true
+          };
+
+          const carouselHelpersSponsors = ( 
+              <div>
+                  <h2>Sponsors</h2>
+                  <div style={{ marginTop: '25px', marginBottom: '25px' }}>
+                      <Slider {...settings}>{sponsorList} </Slider>
+                  </div>
+                  <h2>Staff</h2>
+                  <div style={{ marginTop: '25px', marginBottom: '25px' }}>
+                      <Slider {...settings}>{personList}</Slider>
+                  </div>
+              </div>
+            )
+
         return (
-            <div>
+            <div style={{marginLeft:'25px'}}>
                 <h1 >About Us</h1>
                 <h2>Founders</h2>
                 <Grid >
@@ -84,18 +137,13 @@ class AboutUs extends React.Component {
                         fwmk lmfwklemfwelkf mwklm klwfmklwe mlkfme klfmwkl mfklwem lfwekm fmwklm
                     </Grid.Column>
                 </Grid>
-                <h2>Helpers</h2>
-                <div style={{marginTop:'25px'}}>
-                <Card.Group >
-                {personList}
-                </Card.Group>
-                </div>
+                {carouselHelpersSponsors}
                 <div style={{marginTop:'25px'}}>
                 <Button bsStyle="primary" onClick={this.handleNameChange.bind(this)}>Change</Button>
-                <Button bsStyle="primary" onClick={this.handleGetPerson.bind(this)}>Get Persons</Button>
-                <Button bsStyle="primary" href="/aboutForm">Edit People</Button>
-
+                <Button bsStyle="primary" onClick={this.handlePostSponsor.bind(this)}>Get Persons</Button>
+                <Button bsStyle="primary" href="/aboutform">Edit People</Button>
                 </div>
+     
             </div>
         )
             
@@ -103,12 +151,13 @@ class AboutUs extends React.Component {
 }
 function mapStateToProps(state) {
     return {
-        pep: state.people
+        personPropArray: state.people,
+        sponsorPropArray: state.sponsors
     }
 }
 function mapDispatchToProps(dispatch) {
     return bindActionCreators({
-        changeName,postPerson,getPerson
+        changeName,postPerson,getPerson,getSponsors,postSponsor
     },dispatch)
 }
 export default connect(mapStateToProps,mapDispatchToProps)(AboutUs);

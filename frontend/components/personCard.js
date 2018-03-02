@@ -4,6 +4,7 @@ import { Button,Grid, Card, Icon, Image } from 'semantic-ui-react';
 class PersonCard extends React.Component {
     render() {
         return (
+        <div style={{marginBottom:'20px',marginLeft:'20px'}}>
         <Card>
             <Image src={this.props.images} />
             <Card.Content>
@@ -15,6 +16,7 @@ class PersonCard extends React.Component {
               </Card.Description>
             </Card.Content>
           </Card>
+          </div>
         )
     }
 }

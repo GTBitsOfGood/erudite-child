@@ -25,23 +25,20 @@
     "enzyme": "^2.8.1",
     "expect": "^1.20.2",
     "express": "^4.15.2",
-<<<<<<< HEAD
     "gulp": "^*",
-=======
     "express-session": "^1.15.6",
->>>>>>> About Us Base Code, Added /aboutUs and /aboutForm
     "mocha": "^3.2.0",
     "mongoose": "^5.0.7",
     "morgan": "^1.9.0",
     "node-sass": "^4.5.2",
     "prop-types": "^15.5.8",
-<<<<<<< HEAD
     "pure-react-carousel": "^1.11.1",
     "react-responsive-carousel": "^3.1.33",
     "react": "^15.6.2",
     "react-bootstrap": "^0.32.1",
     "react-dom": "^15.6.2",
     "react-redux": "^5.0.5",
+    "react-responsive-carousel": "^3.1.33",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
     "react-router-redux": "^4.0.8",

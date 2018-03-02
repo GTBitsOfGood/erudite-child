@@ -13,8 +13,8 @@ export default function Root({ store }) {
                 <div>
                     <Switch>
                         <Route exact path="/" component={Home} />
-                        <Route path="/aboutUs" component={AppContainer} />
-                        <Route path="/aboutForm" component={aboutForm} />
+                        <Route path="/aboutus" component={AppContainer} />
+                        <Route path="/aboutform" component={aboutForm} />
                     </Switch>
                 </div>
             </Router>

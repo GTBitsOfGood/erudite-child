@@ -46,15 +46,35 @@ router.post('/person', function(req, res){
     })
   });
 
+  router.post('/sponsor', function(req, res){
+    var per = req.body;
+    User.create(per, function(err, per){
+      if(err){
+        throw err;
+      }
+      res.json(per);
+    })
+  });
+
 // GET person
 router.get('/person', function(req, res){
-    User.find({},function(err, p){
+    User.find({'isSponsor': false},function(err, p){
       if(err){
         throw err;
       }
       res.json(p)
     })
   });
+
+router.get('/sponsors', function(req, res){
+    User.find({'isSponsor': true},function(err, p){
+      if(err){
+        throw err;
+      }
+      res.json(p)
+    })
+  });
+
 router.delete('/person/:_id', function(req, res){
     var query = {_id: req.params._id};
     User.remove(query, function(err, pp){
@@ -65,5 +85,14 @@ router.delete('/person/:_id', function(req, res){
     })
   });
 
+  router.delete('/sponsor/:_id', function(req, res){
+    var query = {_id: req.params._id};
+    User.remove(query, function(err, pp){
+      if(err){
+        console.log("# API DELETE: ", err);
+      }
+      res.json(pp);
+    })
+  });
 
 module.exports = router;
