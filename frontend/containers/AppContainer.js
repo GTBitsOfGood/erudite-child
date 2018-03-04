@@ -2,11 +2,12 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { connect } from 'react-redux';
 import Title from '../components/Title';
+import DonateContainer from './DonateContainer';
 
 const AppContainer = ({ name }) => {
     return (
         <div>
-            <Title name={name} />
+            <DonateContainer />
         </div>
     );
 };
