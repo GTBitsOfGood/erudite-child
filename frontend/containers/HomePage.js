@@ -14,7 +14,7 @@ class HomePage extends React.Component {
             <Navbar name="Login"/>
         </div>
         <Carousel/>
-
+        
         <div className="header-1">
           <Header as='h1' floated='right'>
             What is The Erudite Child?
@@ -42,7 +42,7 @@ class HomePage extends React.Component {
         <a className="twitter-grid" href="https://twitter.com/TwitterDev/timelines/539487832448843776?ref_src=twsrc%5Etfw">National Park Tweets</a> 
         <script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>
         <script id="twitter-wjs" type="text/javascript" async defer src="//platform.twitter.com/widgets.js"></script>
-        <a class="twitter-timeline" href="https://twitter.com/TwitterDev/timelines/539487832448843776?ref_src=twsrc%5Etfw">National Park Tweets - Curated tweets by TwitterDev</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <a className="twitter-timeline" href="https://twitter.com/TwitterDev/timelines/539487832448843776?ref_src=twsrc%5Etfw">National Park Tweets - Curated tweets by TwitterDev</a><script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>
         
                   </div>
             </Grid.Column>
