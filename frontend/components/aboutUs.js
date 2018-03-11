@@ -6,6 +6,7 @@ import {Button} from 'react-bootstrap'
 import { Grid, Card, Icon, Image, Menu } from 'semantic-ui-react';
 import PersonCard from './personCard';
 import Slider from "react-slick";
+import '../assets/stylesheets/base.scss';
 
 
 class AboutUs extends React.Component {
@@ -88,7 +89,9 @@ class AboutUs extends React.Component {
                   <div>
                       <Slider {...settings}>{sponsorList} </Slider>
                   </div>
+                  <center>
                   <hr />
+                  </center>
                   <h2>Staff</h2>
                   <div >
                       <Slider {...settings}>{personList}</Slider>
@@ -97,8 +100,8 @@ class AboutUs extends React.Component {
             )
 
         return (
-            <div id="main" style={{marginTop:'-60px'}}>
-                <header>
+            <div id="main">
+                <header style={{padding: "150px", marginBottom:"20px",marginTop:"-40px"}} >
 					<h2>About Us</h2>
 					<p>Some Line about Erudite Child</p>
 				</header>
@@ -136,7 +139,9 @@ class AboutUs extends React.Component {
 
                     </Grid.Column>
                 </Grid>
+                <center>
                 <hr />
+                </center>
                 {carouselHelpersSponsors}
 
                 </div>

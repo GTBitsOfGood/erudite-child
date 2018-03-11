@@ -5,6 +5,7 @@ import AppContainer from './AppContainer.js';
 import Home from './home';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import aboutForm from '../components/aboutForm.js';
+import ProgramsPage from '../components/programsPage.js';
 
 export default function Root({ store }) {
     return (
@@ -15,6 +16,7 @@ export default function Root({ store }) {
                         <Route exact path="/" component={Home} />
                         <Route path="/aboutus" component={AppContainer} />
                         <Route path="/aboutform" component={aboutForm} />
+                        <Route path="/programs" component={ProgramsPage} />
                     </Switch>
                 </div>
             </Router>
