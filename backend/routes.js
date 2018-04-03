@@ -6,6 +6,15 @@ const session = require('express-session');
 const app = express();
 const MongoStore = require('connect-mongo')(session);
 const router = express.Router();
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
+const settings = require('../config/settings');
+const authenticate = require('./authenticate')
+
+/*
+This backend is messy and should be split up into different
+files in the future.
+*/
 
 // YOUR API ROUTES HERE
 router.use('/', (req, res) => {
@@ -15,13 +24,10 @@ router.use('/', (req, res) => {
 router.use(morgan('dev'));
 router.use(bodyParser.json());
 router.use(bodyParser.urlencoded({ extended: true }));
+
+
 /*
-router.use(session({
-  secret: process.env.SECRET,
-  store: new MongoStore({ mongooseConnection: mongoose.connection }),
-  resave: true,
-  saveUninitialized: false
-}));
+Connect with the Mongo Database
 */
 mongoose.connect('mongodb://localhost:27017/new')
 var db = mongoose.connection;
@@ -34,8 +40,16 @@ router.use(session({
     //ttl: 2 days * 24 hours * 60 minutes * 60 seconds
   }))
 
+/*
+This people model contains either
+sponsors or staff members displayed
+in the about us page.
+*/
 const User = require('./models/people');
-
+/*
+Routes for the About Us and About Form Pages
+----------------------------------------------
+*/
 router.post('/person', function(req, res){
     var per = req.body;
     User.create(per, function(err, per){
@@ -57,11 +71,12 @@ router.post('/person', function(req, res){
   });
 
 // GET person
-router.get('/person', function(req, res){
+router.get('/person',authenticate.auth, function(req, res){
     User.find({'isSponsor': false},function(err, p){
       if(err){
         throw err;
       }
+      console.log({user:req.currentUser})
       res.json(p)
     })
   });
@@ -94,5 +109,84 @@ router.delete('/person/:_id', function(req, res){
       res.json(pp);
     })
   });
+<<<<<<< HEAD
 
 module.exports = router;
+=======
+/*
+------------------------------------------------
+*/
+
+/*
+This Account model contains either
+user accounts for the website.
+*/
+  const Account = require('./models/account');
+
+/*
+Routes for Sign Up
+-------------------------------------------------
+*/
+  router.post('/signup', function(req, res){
+    var per = req.body;
+    per.password = bcrypt.hashSync(per.password,10);
+    console.log(per);
+    Account.create(per, function(err, anything){
+      if(err){
+        throw err;
+      }
+      res.json(anything);
+    })
+  });
+/*
+------------------------------------------------
+*/
+/*
+Routes for Sign In
+-------------------------------------------------
+*/
+  router.post('/signIn', function(req, res) {
+    Account.findOne({
+      email: req.body.email
+    }, function(err, user) {
+      if (err) throw err;
+
+      if (!user) {
+        console.log("Not good user")
+        res.status(401).send({success: false, msg: 'Authentication failed. User not found.'});
+      } else {
+        // check if password matches
+        bcrypt.compare(req.body.password, user.password, function(err, check) {
+          if(!check || err) {
+            console.log("BAD");
+            res.status(401).send({success: false, msg: 'Authentication failed. Wrong password.'});
+          } else {
+          //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+          //NEED TO CHANGE SO IT DOES NOT SIGN AND RETURN PASSWORD
+          //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+          const safeUser = {
+            "_id": user._id,
+            "email": user.email,
+            "firstName": user.firstName,
+            "lastName": user.lastName,
+            "accountType": user.accountType
+          }
+
+          let token = jwt.sign(safeUser, settings.secret);
+          // return the information including token as JSON
+         //console.log(user.toJSON())
+          res.json({token});
+            console.log("GOOD");
+          }
+          // res == true
+      });
+      }
+    });
+  });
+/*
+------------------------------------------------
+*/
+
+module.exports = router;
+>>>>>>> aboutUs, programs page, and Login

@@ -2,9 +2,9 @@ import React from 'react';
 class HomePage extends React.Component{
     render() {
         return (
-  <h1>
+  <span style={{background: '#000'}}>
 This is a testing Home Page
-    </h1>
+    </span>
                 )
     }
 }

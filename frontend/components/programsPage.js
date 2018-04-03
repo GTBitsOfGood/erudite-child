@@ -1,11 +1,14 @@
 'use strict'
 import React from 'react';
 import '../assets/stylesheets/base.scss';
-import { Grid, Image, Button} from 'semantic-ui-react'
+import { Grid, Image, Button} from 'semantic-ui-react';
+import Navbar from './navbar';
+
 class ProgramPage extends React.Component {
     render() {
         return (
             <div id="fle">
+            <Navbar/>
                 <header id="programHeader">
                     <h2>Get Involved</h2>
                     <p>Learn About Our Programs & Get Involved Today</p>

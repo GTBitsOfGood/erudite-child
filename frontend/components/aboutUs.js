@@ -7,7 +7,7 @@ import { Grid, Card, Icon, Image, Menu } from 'semantic-ui-react';
 import PersonCard from './personCard';
 import Slider from "react-slick";
 import '../assets/stylesheets/base.scss';
-
+import Navbar from './navbar';
 
 class AboutUs extends React.Component {
     getData() {
@@ -101,11 +101,11 @@ class AboutUs extends React.Component {
 
         return (
             <div id="main">
-                <header style={{padding: "150px", marginBottom:"20px",marginTop:"-40px"}} >
+            <Navbar />
+                <header >
 					<h2>About Us</h2>
 					<p>Some Line about Erudite Child</p>
 				</header>
-                <section className="wrapper aboutus">
                 <div className="inner">
                 <h2>Founders</h2>
                 <Grid >
@@ -145,7 +145,6 @@ class AboutUs extends React.Component {
                 {carouselHelpersSponsors}
 
                 </div>
-                </section>
 
             </div>
         )

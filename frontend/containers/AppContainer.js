@@ -3,6 +3,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Title from '../components/Title';
 import HomePage from '../containers/HomePage';
+import AboutUs from '../components/aboutUs';
 
 const AppContainer = ({ name }) => {
   return (
@@ -10,10 +11,6 @@ const AppContainer = ({ name }) => {
       <HomePage />
     </div>
   );
-};
-
-AppContainer.propTypes = {
-    name: PropTypes.string,
 };
 
 const mapStateToProps = (state) => {
