@@ -1,4 +1,57 @@
-h1 {
-  font-family: helvetica;
-  font-weight: 200;
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body {
+  font-family: 'Montserrat', sans-serif;
 }
+.home-body {
+  padding: 50px 50px 0px
+}
+
+.ui.menu {
+    border: none;
+    border-radius: 0px !important;
+    box-shadow: none;
+}
+.home-nav {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+h1.ui.header {
+  color: #89c4f4;
+}
+.header-1 {
+  padding-top: 10px;
+}
+p {
+  padding-left: 30px;
+}
+.home-info-1 {
+  padding: 120px 0;
+  color: #818181;
+}
+.home-info-2 {
+  color: #818181;
+}
+.home-info-3 {
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 80px;
+  color: #818181;
+  font-size: 20px;
+}
+.home-text-1 {
+  font-size: 30px;
+}
+.home-text-2 {
+  font-size: 25px;
+}
+.footer-home {
+  height: 250px;
+  background-color: #8898aa;
+  padding-top: 25px;
+  font-size: 15px
+}
+ a{
+   color: white;
+   font-size: 20px;
+ }
