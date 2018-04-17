@@ -23,9 +23,9 @@ class HomePage extends React.Component {
         <div className="home-info-1">
           <Grid>
             <Grid.Column width={4}>
-              <Image src='/assets/images/child.png' size="small"/>
+              <Image src='https://i.pinimg.com/originals/08/f6/33/08f6335f8b8e0a8210e92f09509274f1.jpg'/>
             </Grid.Column>
-            <Grid.Column width={8}>
+            <Grid.Column width={12}>
                   <div className="home-text-1">
                     <p>
                         Headquarted and active in India the Erudite Child
@@ -48,12 +48,12 @@ class HomePage extends React.Component {
              </Grid.Column>
              <Grid.Column >
                  <Segment>
-                     <Image src="https://water.org/media/images/Waterorg_Homepage_Footer.original.jpg" />
+                     <Image src="https://avpn.asia/wp-content/uploads/2017/08/Indian-Education-cover.png" />
                  </Segment>
              </Grid.Column>
              <Grid.Column>
                  <Segment>
-                     <Image src="https://water.org/media/images/Waterorg_Homepage_Footer.original.jpg" />
+                     <Image src="https://www.thebetterindia.com/wp-content/uploads/2016/06/wp4.jpg" />
                  </Segment>
              </Grid.Column>
              <div className="home-text-2">
