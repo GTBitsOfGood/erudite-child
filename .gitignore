@@ -61,6 +61,10 @@ typings/
 # Yarn Integrity file
 .yarn-integrity
 
+# Ignore hot-update files
+*hot-update.json
+*hot-update.js
+
 # dotenv environment variables file
 .env
 
