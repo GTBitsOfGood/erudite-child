@@ -1,0 +1,62 @@
+#fle > header {
+    width:100%;
+    height: 300px;
+    background-color: #acc7dc;
+    text-align: center;
+    padding-top: 90px;
+    margin-bottom: 20px;
+}
+html {
+    background:white;
+}
+body {
+    background: white;
+}
+
+#fle {
+    display:"flex";
+    position:"fixed";
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    flex-direction:"column";
+    align-items:"center";
+    justify-content:"space-around"
+}
+#programHeader > h2 {
+    font-size: 2.35em;
+    line-height: 1.00em;
+}
+#programHeader > p {
+    letter-spacing: 0.225em;
+}
+program > h2 {
+    font-size: 2.00em;
+    color: black;
+    margin-bottom: 10px
+}
+.program {
+    margin-left: 25px;
+    margin-right:25px;
+    color: black;
+}
+
+hr {
+	border: 0;
+	border-bottom: solid 2px #fff;
+    margin: 55px 0px 45px 0px;
+    border-color: #dfdfdf;
+    width: 80%;
+    text-align: center;
+}
+
+.btn{
+border: 5px solid black;
+padding: 14px 28px;
+font-size: 16px;
+cursor: pointer;
+border-color: #acc7dc;
+color: #acc7dc;
+border-radius: 5px;
+}

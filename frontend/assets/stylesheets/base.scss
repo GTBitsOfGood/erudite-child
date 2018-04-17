@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,800,800italic");
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -55,3 +56,290 @@ p {
    color: white;
    font-size: 20px;
  }
+
+/* -----------------CSS for About Us Page (Probably will cause merge conflicts. Will change when needed) ------------------ */
+	html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, article, header, section{
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: middle;
+	}
+
+	article, header, section {
+		display: block;
+	}
+
+
+	@-ms-viewport {
+		width: device-width;
+	}
+
+
+	body {
+		color: #fff;
+		font-family: "Open Sans", Helvetica, sans-serif;
+		font-size: 15pt;
+		font-weight: 400;
+		letter-spacing: 0.075em;
+		line-height: 1.65em;
+	}
+
+		@media screen and (max-width: 1680px) {
+
+			body {
+				font-size: 13pt;
+			}
+
+		}
+
+		@media screen and (max-width: 1280px) {
+
+			body{
+				font-size: 12pt;
+			}
+
+		}
+
+		@media screen and (max-width: 736px) {
+
+			body{
+				font-size: 11pt;
+				letter-spacing: 0.0375em;
+			}
+
+		}
+
+
+	p {
+		margin: 0 0 2em 0;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		color: #fff;
+		font-weight: 800;
+		letter-spacing: 0.225em;
+		line-height: 1em;
+		margin: 0 0 1em 0;
+		text-transform: uppercase;
+	}
+
+		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+			color: inherit;
+			text-decoration: none;
+		}
+
+	h2 {
+		font-size: 1.35em;
+		line-height: 1.75em;
+	}
+
+		@media screen and (max-width: 736px) {
+
+			h2 {
+				font-size: 1.1em;
+				line-height: 1.65em;
+			}
+
+		}
+
+	h3 {
+		font-size: 1.15em;
+		line-height: 1.75em;
+	}
+
+		@media screen and (max-width: 736px) {
+
+			h3 {
+				font-size: 1em;
+				line-height: 1.65em;
+			}
+
+		}
+
+	h4 {
+		font-size: 1em;
+		line-height: 1.5em;
+	}
+
+/* Wrapper */
+
+	.wrapper {
+		padding: 0em 0 4em 0 ;
+	}
+
+		.wrapper > .inner {
+			width: 60em;
+			margin: 0 auto;
+		}
+
+			@media screen and (max-width: 1280px) {
+
+				.wrapper > .inner {
+					width: 90%;
+				}
+
+			}
+
+			@media screen and (max-width: 980px) {
+
+				.wrapper > .inner {
+					width: 100%;
+				}
+
+			}
+		.wrapper.aboutus {
+			background-color: #ffffff;
+			color: #4E4852;
+		}
+
+			.wrapper.aboutus h2, .wrapper.aboutus h3, .wrapper.aboutus h4 {
+				color: #2E3842;
+			}
+
+
+			.wrapper.aboutus header p {
+				color: #8E8892;
+			}
+
+	#main > header {
+		width:100%;
+		height: 300px;
+		background-image: -moz-linear-gradient(top, #ffc3a0 		, #ffafbd);
+		background-image: -webkit-linear-gradient(top,#ffc3a0 		, #ffafbd);
+		background-image: -ms-linear-gradient(top, #ffc3a0 	, #ffafbd);
+		background-image: linear-gradient(top, #ffc3a0 		, #ffafbd);
+		background-attachment: fixed;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		text-align: center;
+		padding-top: 150px;
+		margin-bottom: 20px;
+		margin-top: 0px;
+	}
+
+	#main > header  h2{
+		font-size: 2.25em;
+		text-align: center;
+		width:100%;
+		position: relative;
+		top: 0;
+		margin-top: -50px;
+		margin-bottom: 10px;
+	}
+
+
+	#main > header p {
+		color: inherit;
+		letter-spacing: 0.225em;
+		text-transform: uppercase;
+		top: 0;
+	}
+	#main {
+			display:"flex";
+			position:"fixed";
+			top:0;
+			left:0;
+			width:100%;
+			height:100%;
+			flex-direction:"column";
+			align-items:"center";
+			justify-content:"space-around"
+	}
+
+	.inner > h2 {
+		font-size: 2.00em;
+		color: black;
+		margin-bottom: 10px
+	}
+	.inner {
+		margin-left: 25px;
+		margin-right:25px;
+		color: black;
+	}
+
+
+	body.is-mobile #main > header {
+		background-attachment: scroll;
+	}
+/* -----------------CSS for Programs Page ------------------ */
+	#fle > header {
+		width:100%;
+		height: 300px;
+		background-color: #FF7575;
+		text-align: center;
+		padding-top: 90px;
+		margin-bottom: 20px;
+		margin-top: 0px;
+	}
+	html {
+		background:white;
+	}
+	body {
+		background: white;
+	}
+
+	#fle {
+		display:"flex";
+		position:"fixed";
+		top:0;
+		left:0;
+		width:100%;
+		height:100%;
+		flex-direction:"column";
+		align-items:"center";
+		justify-content:"space-around"
+	}
+	#programHeader > h2 {
+		font-size: 2.35em;
+		line-height: 1.00em;
+	}
+	#programHeader > p {
+		letter-spacing: 0.225em;
+	}
+	.program > h2 {
+		font-size: 2.00em;
+		color: black;
+		margin-bottom: 10px
+	}
+	.program {
+		margin-left: 25px;
+		margin-right:25px;
+		color: black;
+	}
+
+	hr {
+		border: 0;
+		border-bottom: solid 2px #fff;
+		margin: 55px 0px 45px 0px;
+		border-color: #dfdfdf;
+		width: 80%;
+		text-align: center;
+	}
+
+	.btn{
+		background: #FF7575;
+		border-radius: 60px;
+		padding: 10px 50px;
+		color: #fff;
+		text-decoration: none;
+		font-size: 1.45em;
+		margin: 0 15px;
+		outline:none;
+	  }
+
+	  .btn:hover {
+		-webkit-animation: hover 1200ms linear 2 alternate;
+		animation: hover 1200ms linear 2 alternate;
+		outline: none !important;
+		color: #000;
+	  }
+	  .btn:focus {
+		outline:none !important;
+	}
+		.btn:active {
+			outline:none !important;
+			color: #fff;
+		}
