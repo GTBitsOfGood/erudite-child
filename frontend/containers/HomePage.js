@@ -25,7 +25,7 @@ class HomePage extends React.Component {
             <Grid.Column width={4}>
               <Image src='/assets/images/child.png' size="small"/>
             </Grid.Column>
-            <Grid.Column width={4}>
+            <Grid.Column width={8}>
                   <div className="home-text-1">
                     <p>
                         Headquarted and active in India the Erudite Child
