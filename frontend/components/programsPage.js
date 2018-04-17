@@ -2,7 +2,7 @@
 import React from 'react';
 import '../assets/stylesheets/base.scss';
 import { Grid, Image, Button} from 'semantic-ui-react';
-import Navbar from './navbar';
+import Navbar from './Navbar';
 
 class ProgramPage extends React.Component {
     render() {
@@ -29,7 +29,7 @@ class ProgramPage extends React.Component {
                             cnwn ewncnwm, nm,ewm,n n,afn ejkfnwkje njkew njaknf ,wn, nwefm, wne,fn ,mewnf ,wne
                             nfwek nfkjwe nfnew jknfjk wnfkw nkfjwn kfjenw kjfnwe kfjenwfwef nwenf, ewnc enfwn,f
                             nfewn jk nfewn kfwe lkfmek wlfmwlke mfkwel mfklwem kwemflkem lkmfklmfwklfm kelwmf kew
-                            fkwnjfkenw jkfnewj knfkj wenfjk nwefjewn fjk nwjkfn ewjk fnjew nfwej nkwej nfk jenwef 
+                            fkwnjfkenw jkfnewj knfkj wenfjk nwefjewn fjk nwjkfn ewjk fnjew nfwej nkwej nfk jenwef
 
                         </Grid.Column>
                     </Grid>
@@ -50,7 +50,7 @@ class ProgramPage extends React.Component {
                             cnwn ewncnwm, nm,ewm,n n,afn ejkfnwkje njkew njaknf ,wn, nwefm, wne,fn ,mewnf ,wne
                             nfwek nfkjwe nfnew jknfjk wnfkw nkfjwn kfjenw kjfnwe kfjenwfwef nwenf, ewnc enfwn,f
                             nfewn jk nfewn kfwe lkfmek wlfmwlke mfkwel mfklwem kwemflkem lkmfklmfwklfm kelwmf kew
-                            fkwnjfkenw jkfnewj knfkj wenfjk nwefjewn fjk nwjkfn ewjk fnjew nfwej nkwej nfk jenwef 
+                            fkwnjfkenw jkfnewj knfkj wenfjk nwefjewn fjk nwjkfn ewjk fnjew nfwej nkwej nfk jenwef
                         </Grid.Column>
                         <Grid.Column width={5}>
                             <Image src='http://www.petguide.com/wp-content/uploads/2013/06/adopt-a-dog.jpg' />
@@ -76,7 +76,7 @@ class ProgramPage extends React.Component {
                             cnwn ewncnwm, nm,ewm,n n,afn ejkfnwkje njkew njaknf ,wn, nwefm, wne,fn ,mewnf ,wne
                             nfwek nfkjwe nfnew jknfjk wnfkw nkfjwn kfjenw kjfnwe kfjenwfwef nwenf, ewnc enfwn,f
                             nfewn jk nfewn kfwe lkfmek wlfmwlke mfkwel mfklwem kwemflkem lkmfklmfwklfm kelwmf kew
-                            fkwnjfkenw jkfnewj knfkj wenfjk nwefjewn fjk nwjkfn ewjk fnjew nfwej nkwej nfk jenwef 
+                            fkwnjfkenw jkfnewj knfkj wenfjk nwefjewn fjk nwjkfn ewjk fnjew nfwej nkwej nfk jenwef
 
                         </Grid.Column>
                     </Grid>
@@ -89,7 +89,7 @@ class ProgramPage extends React.Component {
                     <center>
                     <button className="btn" style={{marginTop:"20px",marginBottom:"100px"}}>Donate Today</button>
                     </center>
-               
+
 
 
 

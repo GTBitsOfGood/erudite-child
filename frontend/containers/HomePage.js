@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
-import SignupForm from '../components/SignupForm';
+import SignupForm from '../components/signupForm';
 import Footer from '../components/Footer';
 import Carousel from '../components/Carousel';
 import Newsfeed from '../components/Newsfeed';
@@ -14,7 +14,7 @@ class HomePage extends React.Component {
             <Navbar name="Login"/>
         </div>
         <Carousel/>
-        
+
         <div className="header-1">
           <Header as='h1' floated='right'>
             What is The Erudite Child?
@@ -37,13 +37,13 @@ class HomePage extends React.Component {
                         Excepteur sint occaecat cupidatat non proident,
                         sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </p>
-        
-        
-        <a className="twitter-grid" href="https://twitter.com/TwitterDev/timelines/539487832448843776?ref_src=twsrc%5Etfw">National Park Tweets</a> 
+
+
+        <a className="twitter-grid" href="https://twitter.com/TwitterDev/timelines/539487832448843776?ref_src=twsrc%5Etfw">National Park Tweets</a>
         <script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>
         <script id="twitter-wjs" type="text/javascript" async defer src="//platform.twitter.com/widgets.js"></script>
         <a className="twitter-timeline" href="https://twitter.com/TwitterDev/timelines/539487832448843776?ref_src=twsrc%5Etfw">National Park Tweets - Curated tweets by TwitterDev</a><script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>
-        
+
                   </div>
             </Grid.Column>
           </Grid>

@@ -7,7 +7,7 @@ import { Grid, Card, Icon, Image, Menu } from 'semantic-ui-react';
 import PersonCard from './personCard';
 import Slider from "react-slick";
 import '../assets/stylesheets/base.scss';
-import Navbar from './navbar';
+import Navbar from './Navbar';
 
 class AboutUs extends React.Component {
     getData() {
@@ -50,11 +50,11 @@ class AboutUs extends React.Component {
     handleGetPerson() {
         console.log((this.props.personPropArray)[0])
     }
-    
+
     render() {
         const sponsorList = this.props.sponsorPropArray.map(function(sponsorArray){
             return(
-                <div key={sponsorArray._id}>  
+                <div key={sponsorArray._id}>
                 <PersonCard
                       _id= {sponsorArray._id}
                       title={sponsorArray.title}
@@ -64,7 +64,7 @@ class AboutUs extends React.Component {
 
             )
           })
-          
+
         const personList = this.props.personPropArray.map(function(personArr){
             return(
                 <div key={personArr._id}>
@@ -83,7 +83,7 @@ class AboutUs extends React.Component {
             variableWidth: true
           };
 
-          const carouselHelpersSponsors = ( 
+          const carouselHelpersSponsors = (
               <div>
                   <h2>Sponsors</h2>
                   <div>
@@ -114,12 +114,12 @@ class AboutUs extends React.Component {
                     </Grid.Column>
                     <Grid.Column width={10} style={{marginTop:'-8px'}}>
                         fkweklm kflkw emeflk mkl emwfkl melfkmwekl mfewkl fmlkwemf kflkwfmwl
-                        fmwel mkfklwe klmfmweklfmw lkmfklew mlkwefm kewmf klmwlfe mklfewm 
+                        fmwel mkfklwe klmfmweklfmw lkmfklew mlkwefm kewmf klmwlfe mklfewm
                         fmw eklmkflmfklwem lk fmwlmkflwm lkmflkwmfwm klm mfwlkmfkl emwfm kewmfwf mk
                         fwmk lmfwklemfwelkf mwklm klwfmklwe mlkfme klfmwkl mfklwem lfwekm fmwklm
                         fkweklm kflkw emeflk mkl emwfkl melfkmwekl mfewkl fmlkwemf kflkwfmwl
-                        fmwel mkfklwe klmfmweklfmw lkmfklew mlkwefm kewmf klmwlfe mklfewm 
-                   
+                        fmwel mkfklwe klmfmweklfmw lkmfklew mlkwefm kewmf klmwlfe mklfewm
+
                     </Grid.Column>
                 </Grid>
                 <Grid>
@@ -128,11 +128,11 @@ class AboutUs extends React.Component {
                     </Grid.Column>
                     <Grid.Column width={10} style={{marginTop:'-8px'}}>
                         fkweklm kflkw emeflk mkl emwfkl melfkmwekl mfewkl fmlkwemf kflkwfmwl
-                        fmwel mkfklwe klmfmweklfmw lkmfklew mlkwefm kewmf klmwlfe mklfewm 
+                        fmwel mkfklwe klmfmweklfmw lkmfklew mlkwefm kewmf klmwlfe mklfewm
                         fmw eklmkflmfklwem lk fmwlmkflwm lkmflkwmfwm klm mfwlkmfkl emwfm kewmfwf mk
                         fwmk lmfwklemfwelkf mwklm klwfmklwe mlkfme klfmwkl mfklwem lfwekm fmwklm
                         fkweklm kflkw emeflk mkl emwfkl melfkmwekl mfewkl fmlkwemf kflkwfmwl
-                        fmwel mkfklwe klmfmweklfmw lkmfklew mlkwefm kewmf klmwlfe mklfewm 
+                        fmwel mkfklwe klmfmweklfmw lkmfklew mlkwefm kewmf klmwlfe mklfewm
                         fmw eklmkflmfklwem lk fmwlmkflwm lkmflkwmfwm klm mfwlkmfkl emwfm kewmfwf mk
                         fwmk lmfwklemfwelkf mwklm klwfmklwe mlkfme klfmwkl mfklwem lfwekm fmwklm
                         fkweklm kflkw emeflk mkl emwfkl melfkmwekl mfewkl fmlkwemf kflkwfmwl
@@ -148,7 +148,7 @@ class AboutUs extends React.Component {
 
             </div>
         )
-            
+
     }
 }
 /* Debuggin Button

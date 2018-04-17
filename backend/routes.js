@@ -109,10 +109,6 @@ router.delete('/person/:_id', function(req, res){
       res.json(pp);
     })
   });
-<<<<<<< HEAD
-
-module.exports = router;
-=======
 /*
 ------------------------------------------------
 */
@@ -189,4 +185,3 @@ Routes for Sign In
 */
 
 module.exports = router;
->>>>>>> aboutUs, programs page, and Login

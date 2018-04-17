@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import { Button, Form, Grid, Header, Image, Message, Segment } from 'semantic-ui-react'
 import {Redirect} from 'react-router-dom';
-import Navbar from './navbar'
+import Navbar from './Navbar'
 
 class SignInForm extends Component {
     constructor(props) {
@@ -45,7 +45,7 @@ class SignInForm extends Component {
             <Redirect to="/aboutus"/>
             )
           }
-        return ( 
+        return (
         <div className="login-form">
         <Navbar/>
             {/*
@@ -80,7 +80,7 @@ class SignInForm extends Component {
           </div>
         )
     }
- 
+
 }
 
 function mapDispatchToProps(dispatch){
