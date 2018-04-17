@@ -25,7 +25,7 @@ class HomePage extends React.Component {
             <Grid.Column width={4}>
               <Image src='/assets/images/child.png' size="small"/>
             </Grid.Column>
-            <Grid.Column width={9}>
+            <Grid.Column width={4}>
                   <div className="home-text-1">
                     <p>
                         Headquarted and active in India the Erudite Child
@@ -58,7 +58,7 @@ class HomePage extends React.Component {
              </Grid.Column>
              <div className="home-text-2">
                <p>
-                   One of the major barriers to education for most financing.
+                   One of the major barriers to education for most is financing.
                    Through our organization you can help hundreds of children gain
                    access to a better education. You can donate whenever you want and
                    also choose to engage every month with our Adopt A Child initiative which allows
