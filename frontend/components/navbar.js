@@ -31,10 +31,10 @@ class Navbar extends React.Component {
         <Menu.Item name='login' active={activeItem === 'login'} onClick={this.handleItemClick} />
     );
     return (
-        <Menu pointing secondary style={{margin: "0px"}}>
-          <Menu.Item name='home' active={activeItem === 'home'} onClick={this.handleItemClick} />
-          <Menu.Item name='messages' active={activeItem === 'messages'} onClick={this.handleItemClick} />
-          <Menu.Item name='friends' active={activeItem === 'friends'} onClick={this.handleItemClick} />
+        <Menu pointing header>
+          <Menu.Item name='Home' active={activeItem === 'home'} onClick={this.handleItemClick} />
+          <Menu.Item name='About us' active={activeItem === 'messages'} onClick={this.handleItemClick} />
+          <Menu.Item name='Donate' active={activeItem === 'friends'} onClick={this.handleItemClick} />
           <Menu.Menu position='right'>
            {isAuthenticated ? logOut : logIn}
           </Menu.Menu>
