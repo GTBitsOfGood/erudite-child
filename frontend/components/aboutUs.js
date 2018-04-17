@@ -101,7 +101,7 @@ class AboutUs extends React.Component {
 
         return (
             <div id="main">
-            <Navbar />
+            <Navbar name='Login'/>
                 <header >
 					<h2>About Us</h2>
 					<p>Some Line about Erudite Child</p>
@@ -110,7 +110,7 @@ class AboutUs extends React.Component {
                 <h2>Founders</h2>
                 <Grid >
                     <Grid.Column width={4}>
-                        <Image src='https://www.oxfamamerica.org/static/media/images/Aziz_iKQ1qg1.jpg' />
+                        <Image src='' />
                     </Grid.Column>
                     <Grid.Column width={10} style={{marginTop:'-8px'}}>
                         fkweklm kflkw emeflk mkl emwfkl melfkmwekl mfewkl fmlkwemf kflkwfmwl
@@ -124,7 +124,7 @@ class AboutUs extends React.Component {
                 </Grid>
                 <Grid>
                     <Grid.Column width={4} >
-                        <Image src='https://www.oxfamamerica.org/static/media/images/Aziz_iKQ1qg1.jpg' />
+                        <Image src='' />
                     </Grid.Column>
                     <Grid.Column width={10} style={{marginTop:'-8px'}}>
                         fkweklm kflkw emeflk mkl emwfkl melfkmwekl mfewkl fmlkwemf kflkwfmwl
